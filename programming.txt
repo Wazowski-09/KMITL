@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class discrim{ 
+    public static double valueDis(double a,double b,double c){
+        double x = (-b + Math.sqrt(Math.pow(b,2) - 4*a*c)) / 2*a;
+        return x;
+    }
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Quadratic Equation ax^2 + bx + c");
+    System.out.print("a = ");
+    double a = input.nextDouble();
+    System.out.print("b = ");
+    double b = input.nextDouble();
+    System.out.print("c = ");
+    double c = input.nextDouble();
+    System.out.println("x = " + valueDis(a,b,c));
+    }
+}
+
+
+
+import java.util.Scanner;
+public class ATM {
+    public static void banking(int money) {
+        int bank1000 = money / 1000;
+        int bank500 = money % 1000 / 500;
+        int bank100 = money % 1000 % 500 /100;
+        System.out.println("bank 1000 = " + bank1000);
+        System.out.println("bank 500  = " + bank500);
+        System.out.println("bank 100  = " + bank100);
+    }
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Money =>");
+    int money = input.nextInt();
+    banking(money);    
+    }
+}
+
+
+import java.util.Scanner;
+public class candy {
+    public static void candy(int pieces) {
+        int pieces20 = pieces / 20;
+        int pieces10 = pieces % 20 / 10;
+        int pieces5 = pieces % 20 % 10 /5;
+        int pieces1 = pieces % 20 % 10 %5 /1;
+        int total = (pieces20*25) + (pieces10*15) + (pieces5*10) + (pieces1*3);
+        System.out.println("pieces 20 = " + pieces20 + " price = " + pieces20*25);
+        System.out.println("pieces 10 = " + pieces10 + " price = " + pieces10*15);
+        System.out.println("pieces 5  = " + pieces5 + " price = " + pieces5*10);
+        System.out.println("pieces 1  = " + pieces1 + " price = " + pieces1*3);
+        System.out.println("Total  = " + total);
+    }
+    public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.print("pieces =>");
+    int pieces = input.nextInt();
+    candy(pieces);    
+    }
+}
